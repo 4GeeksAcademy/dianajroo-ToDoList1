@@ -10,3 +10,24 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+
+body {
+    margin-top: 100px;
+}
+ul {
+    margin-bottom: 0;
+}
+ul li {
+    border: 1px solid grey;
+    padding: 5px;
+}
+h1 {
+    text-align: center;
+    color: brown;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+}
+input {
+    border: none;
+    width: 100%;
+}
