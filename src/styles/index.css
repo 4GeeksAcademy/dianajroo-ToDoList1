@@ -16,6 +16,7 @@ body {
 }
 ul {
     margin-bottom: 0;
+    list-style: none;
 }
 ul li {
     border: 1px solid rgb(188, 187, 187);
