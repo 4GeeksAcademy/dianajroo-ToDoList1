@@ -8,6 +8,7 @@ import { faXmark } from '@fortawesome/free-solid-svg-icons'
 const Home = () => {
 	const [inputValue, setInputValue] = useState("");
 	const [todos, setTodos] = useState([]);
+	const [activeIndex, setactiveIndex] = useState (null)
 	return (
 		<div className="container">
 			<h1>todos</h1>
@@ -25,8 +26,8 @@ const Home = () => {
 
 				</li>
 				{todos.map((text, index) => (
-					<li style={{ display: "flex", justifyContent: "space-between" }}> 
-					{text} <FontAwesomeIcon icon={faXmark} onClick={() => setTodos(todos.filter((t, flujoIndex) => index != flujoIndex))} />
+					<li style={{ display: "flex", justifyContent: "space-between" }} onMouseEnter={() => setactiveIndex(index) } onMouseLeave={() => setactiveIndex (null)}> 
+					{text} { index == activeIndex && <FontAwesomeIcon icon={faXmark} onClick={() => setTodos(todos.filter((t, flujoIndex) => index != flujoIndex))}  />}
 					</li>
 				))}
 			</ul>
