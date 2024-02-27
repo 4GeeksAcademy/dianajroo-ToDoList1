@@ -30,8 +30,10 @@ const Home = () => {
 					{text} { index == activeIndex &&  <FontAwesomeIcon icon={faX} size="xs" style={{color: "#e66565",}}  onClick={() => setTodos(todos.filter((t, flujoIndex) => index != flujoIndex))}  />}
 					</li>
 				))}
+
+				<div className="footer">{todos.length} items left</div>
+
 			</ul>
-			<div className="footer">{todos.length} items left</div>
 		</div>
 	);
 };

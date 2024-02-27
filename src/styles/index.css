@@ -54,3 +54,7 @@ input:focus-visible {
 body {
     background-color: pink;
 }
+.container {
+    height: 60vh;
+    width: 50vw;
+}
