@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faXmark } from '@fortawesome/free-solid-svg-icons'
+import { faX } from '@fortawesome/free-solid-svg-icons'
 
 
 
@@ -27,7 +27,7 @@ const Home = () => {
 				</li>
 				{todos.map((text, index) => (
 					<li style={{ display: "flex", justifyContent: "space-between" }} onMouseEnter={() => setactiveIndex(index) } onMouseLeave={() => setactiveIndex (null)}> 
-					{text} { index == activeIndex && <FontAwesomeIcon icon={faXmark} onClick={() => setTodos(todos.filter((t, flujoIndex) => index != flujoIndex))}  />}
+					{text} { index == activeIndex &&  <FontAwesomeIcon icon={faX} size="xs" style={{color: "#e66565",}}  onClick={() => setTodos(todos.filter((t, flujoIndex) => index != flujoIndex))}  />}
 					</li>
 				))}
 			</ul>
